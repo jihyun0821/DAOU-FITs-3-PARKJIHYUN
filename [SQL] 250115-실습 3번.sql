@@ -1,16 +1,19 @@
--- 실습과제 3
+-- 고객 테이블에서 '555-1000'으로 시작하는 전화번호을 가진 고객의 이름과 이메일을 출력하시오
 SELECT NAME, EMAIL
 FROM CUSTOMERS
 WHERE PHONE LIKE '555-1000%';
 
+-- 계좌 테이블에서 계좌 유형이 'SAVINGS'이고 잔액이 10,000이상인 계좌의 계좌ID와 잔액을 출력하시오
 SELECT ACCOUNT_ID, BALANCE
 FROM ACCOUNTS
 WHERE ACCOUNT_TYPE = 'SAVINGS' AND BALANCE >= 10000;
 
+-- 거래 테이블에서 거래 유형이 'DEPOSIT'이고 거래 금액이 1,000이상인 거래의 거래 ID와 금액을 출력하시오
 SELECT TRANSACTION_ID, AMOUNT
 FROM TRANSACTIONS
 WHERE TRANSACTION_TYPE = 'DEPOSIT' AND AMOUNT >= 1000;
 
+-- 대출 테이블에서 대출 금액이 50,000 이상이며 대출 상태가 'PENDING'인 대출 ID와 금액을 출력하시오
 SELECT LOAN_ID, AMOUNT
 FROM LOANS
 WHERE AMOUNT >= 50000 AND STATUS = 'PENDING';
